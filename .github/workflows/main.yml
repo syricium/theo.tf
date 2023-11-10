@@ -5,25 +5,30 @@ on:
     workflows: ["Node.js CI"]
     types:
       - completed
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.4
 
-    - name: Setup Git
-      run: |
-        git config user.name "GitHub Actions"
-        git config user.email "actions@github.com"
+      - name: Setup Node.js
+        uses: actions/setup-node@v2.1.5
+        with:
+          node-version: '18'
 
-    - name: Move files and push to gh-pages
-      run: |
-        git checkout gh-pages
-        git rm -rf .
-        git checkout master -- src
-        git mv src/* .
-        git commit -m "Update GitHub Pages"
-        git push origin gh-pages
+      - name: Clean gh-pages Branch
+        run: |
+          git checkout gh-pages
+          git rm -rf .
+          git commit -m "Clean gh-pages branch"
+
+      - name: Copy src to gh-pages
+        run: |
+          git checkout main
+          cp -r src/* ../temp/
+          git checkout gh-pages
+          cp -r ../temp/* .
+          git add .
+          git commit -m "Update gh-pages branch"
+          git push origin gh-pages
