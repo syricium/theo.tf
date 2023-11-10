@@ -1,0 +1,29 @@
+name: Deploy to GitHub Pages
+
+on:
+  workflow_run:
+    workflows: ["Node.js CI"]
+    types:
+      - completed
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup Git
+      run: |
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+
+    - name: Move files and push to gh-pages
+      run: |
+        git checkout gh-pages
+        git rm -rf .
+        git checkout master -- src
+        git mv src/* .
+        git commit -m "Update GitHub Pages"
+        git push origin gh-pages
