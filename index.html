@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/static/css/tailwind.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <script src="/static/js/98tabs.js"></script>
+  <script src="/static/js/bypassAutoplay.js"></script>
+  <title>theo.tf</title>
+</head>
+<body class="space h-screen w-screen cursor-[url(/static/sword.png),_auto] overflow-hidden">
+  <!--
+    thanks to (credits):
+      - https://hytracer.ink/ for the idea of space in the background and the 98.css windows
+      - https://codepen.io/keithclark/pen/DQdKbg for the starfield background css
+      - https://jdan.github.io/98.css/ for the windows 98 style windows
+      - https://versary.town/ for the idea of the minecraft sword
+      - https://github.com/adryd325/oneko.js and https://maia.crimew.gay/oneko.js for the mouse following the cursor
+      - https://cyber.dabamos.de/88x31/ for the massive collection of micro-banners
+  -->
+  <span class="start"></span>
+  <audio id="music" src="static/bg.mp3" loop="true"></audio>
+  <div style="z-index: 999999999; position: relative; top: 0px; left: 0px;" id="cover" class="w-screen h-screen bg-black">
+    <div class="inline-flex items-center justify-center w-screen h-screen">
+      <div class="window" style="margin: 32px; width: 250px">
+        <div class="title-bar">
+          <div class="title-bar-text select-none">
+            caution
+          </div>
+    
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window" role="tabpanel">
+          <div class="window-body flex flex-col items-center justify-center" id="about-body">
+            <p>click the button below to access the website. warning: there's music</p>
+            <button style="margin-top: 0.25rem;" class="text-xs" onclick="accessClicked()">click here</button>
+          </div>
+        </div>
+        </div>
+      </div>
+  </div>
+  <div class="stars" hidden></div>
+  <div class="stars" hidden></div>
+  <div class="stars" hidden></div>
+  <div class="stars" hidden></div>
+  <div class="stars" hidden></div>
+  <script src="/static/js/oneko.js"></script>
+  <div style="position: relative; z-index: 1;">
+    <div class="inline-flex items-center justify-center w-screen h-screen">
+      <div class="window" style="margin: 32px; width: 500px">
+        <div class="title-bar">
+          <div class="title-bar-text select-none">
+            theo
+          </div>
+    
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Maximize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        
+        <div class="flex flex-row items-center justify-center pt-6 pr-4">
+          <img src="/static/theo.gif" class="h-28 max-sm:h-20 max-[450px]:h-14"/>
+        </div>
+
+        <menu role="tablist" class="pt-1 select-none">
+          <li role="tab" id="about" aria-selected="true"><a onclick="changeTab('about')">About</a></li>
+          <li role="tab" id="contact"><a onclick="changeTab('contact')">Contact</a></li>
+        </menu>
+        <div class="window" role="tabpanel">
+          <div class="window-body" id="about-body">
+            <p>
+              my name is theo, i do software development (mostly backend).
+              my interests/hobbies are linux and gaming.
+              im currently quite good in python, but once i have the motivation i will likely start to learn a low level language.
+            </p>
+          </div>
+          <div class="window-body" id="contact-body" hidden="true">
+            <p>
+              you can contact me through <a href="https://discord.com/users/424548154403323934">discord</a> or 
+              <a href="mailto:theo@749.city">e-mail</a>.<br/>
+              <a href="/static/theo_0x6543E013_public.asc">this</a> is my public pgp key.
+            </p>
+          </div>
+        </div>
+      
+        <div class="flex flex-col">
+          <div class="flex flex-row" style="margin-left: 4px; margin-top: 0.5rem;">
+            <a href="https://cyber.dabamos.de/88x31/"><img src="/static/mbs/88x31.gif" /></a>
+            <a href="https://hetzner.com"><img src="/static/mbs/hetzner.gif" /></a>
+            <a><img src="/static/mbs/35mm.gif" /></a>
+            <a href="https://archlinux.org"><img src="/static/mbs/gnu-linux.gif" /></a>
+            <a><img src="/static/mbs/html.gif" /></a>
+            <a href="https://winworldpc.com/product/netscape-navigator/30x"><img src="/static/mbs/netscape.webp" /></a>
+            <a><img src="/static/mbs/notepad.gif" /></a>
+          </div>
+          <div class="flex flex-row" style="margin-left: 4px; margin-bottom: 0.5rem;">
+            <a><img src="/static/mbs/arizona.gif" /></a>
+            <a><img src="/static/mbs/css.gif" /></a>
+            <a><img src="/static/mbs/fckgoogle.gif" /></a>
+            <a href="https://www.mozilla.org/en-US/firefox/new/"><img src="/static/mbs/firefox.gif" /></a>
+            <a><img src="/static/mbs/bitwarden.gif" /></a>
+            <a href="https://steamcommunity.com/id/syriciumcs2/"><img src="/static/mbs/csplayer.gif" /></a>
+            <a><img src="/static/mbs/chrmevil.gif" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!--
+    <div class="text-center">
+      <div class="bg-[#0a1011] space-y-4 inline-flex  flex-col m-8 py-4 px-4">
+        <p class="text-5xl underline font-['Agbalumo']">hello!</p>
+        <div class="font-['Playfair_Display'] text-xl">
+          <p>my name is theo, i do software development (mostly backend)</p>
+          <p>my hobbies are playing games and listening to music</p>
+          <div class="flex flex-row items-center justify-center space-x-2 my-2">
+            <p>these are my socials:</p>
+            <a href="https://codeberg.org/syricium" target="_blank"><img class="h-6"src="https://codeberg.org/assets/img/favicon.png"/></a>
+            <a href="https://discord.com/users/424548154403323934" target="_blank"><img class="h-4"src="/static/discord.png"/></a>
+            <a href="https://steamcommunity.com/id/syricium/" target="_blank"><img class="h-4"src="https://steamcommunity.com/favicon.ico"/></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="text-center">
+      <div class="bg-[#0a1011] space-y-4 inline-flex  flex-col m-8 py-4 px-4">
+        <p class="text-5xl underline font-['Agbalumo']">my projects</p>
+        <div class="font-['Playfair_Display'] text-xl">
+          <p>these are my projects, most of them were discord bots.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    -->
+</body>
+</html>
