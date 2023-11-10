@@ -18,9 +18,9 @@ jobs:
           node-version: '18'
 
       - name: Set Git Identity
-      run: |
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
 
       - name: Clean gh-pages Branch
         run: |
