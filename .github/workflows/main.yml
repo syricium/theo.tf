@@ -44,5 +44,6 @@ jobs:
           git checkout gh-pages
           cp -r ../temp/* .
           git add .
+          git pull
           git commit -m "Update gh-pages branch"
           git push -f origin gh-pages
