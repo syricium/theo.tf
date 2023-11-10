@@ -6,16 +6,6 @@ body {
     background-color: #0f1819;
 }
 
-@font-face {
-    font-family: Agbalumo;
-    src: url(/static/fonts/Agbalumo.ttf);
-}
-
-@font-face {
-    font-family: Playfair_Display;
-    src: url(/static/fonts/PlayfairDisplay.ttf);
-}
-
 
 /* credits: https://codepen.io/keithclark/pen/DQdKbg */
 #space, .stars {
