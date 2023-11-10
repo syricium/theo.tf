@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v2.3.4
-        with:
-          persist-credentials: false
-          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v2.1.5
@@ -24,7 +21,6 @@ jobs:
         run: |
           git config --global user.name "GitHub Actions"
           git config --global user.email "actions@github.com"
-
       - name: Clean gh-pages Branch
         run: |
           git fetch
@@ -37,7 +33,6 @@ jobs:
             git rm -rf .
             git commit --allow-empty -m "Initial gh-pages commit"
           fi
-
       - name: Copy src to gh-pages
         run: |
           git checkout main
