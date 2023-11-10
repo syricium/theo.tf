@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/static/css/tailwind.css" rel="stylesheet">
+  <link href="./static/css/tailwind.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/98.css">
-  <script src="/static/js/98tabs.js"></script>
-  <script src="/static/js/bypassAutoplay.js"></script>
+  <script src="./static/js/98tabs.js"></script>
+  <script src="./static/js/bypassAutoplay.js"></script>
   <title>theo.tf</title>
 </head>
-<body class="space h-screen w-screen cursor-[url(/static/sword.png),_auto] overflow-hidden">
+<body class="space h-screen w-screen cursor-[url(./static/sword.png),_auto] overflow-hidden">
   <!--
     thanks to (credits):
       - https://hytracer.ink/ for the idea of space in the background and the 98.css windows
@@ -20,7 +20,7 @@
       - https://cyber.dabamos.de/88x31/ for the massive collection of micro-banners
   -->
   <span class="start"></span>
-  <audio id="music" src="static/bg.mp3" loop="true"></audio>
+  <audio id="music" src="./static/bg.mp3" loop="true"></audio>
   <div style="z-index: 999999999; position: relative; top: 0px; left: 0px;" id="cover" class="w-screen h-screen bg-black">
     <div class="inline-flex items-center justify-center w-screen h-screen">
       <div class="window" style="margin: 32px; width: 250px">
@@ -49,7 +49,7 @@
   <div class="stars" hidden></div>
   <div class="stars" hidden></div>
   <div class="stars" hidden></div>
-  <script src="/static/js/oneko.js"></script>
+  <script src="./static/js/oneko.js"></script>
   <div style="position: relative; z-index: 1;">
     <div class="inline-flex items-center justify-center w-screen h-screen">
       <div class="window" style="margin: 32px; width: 500px">
@@ -66,7 +66,7 @@
         </div>
         
         <div class="flex flex-row items-center justify-center pt-6 pr-4">
-          <img src="/static/theo.gif" class="h-28 max-sm:h-20 max-[450px]:h-14"/>
+          <img src="./static/theo.gif" class="h-28 max-sm:h-20 max-[450px]:h-14"/>
         </div>
 
         <menu role="tablist" class="pt-1 select-none">
@@ -85,60 +85,32 @@
             <p>
               you can contact me through <a href="https://discord.com/users/424548154403323934">discord</a> or 
               <a href="mailto:theo@749.city">e-mail</a>.<br/>
-              <a href="/static/theo_0x6543E013_public.asc">this</a> is my public pgp key.
+              <a href="./static/theo_0x6543E013_public.asc">this</a> is my public pgp key.
             </p>
           </div>
         </div>
       
         <div class="flex flex-col">
           <div class="flex flex-row" style="margin-left: 4px; margin-top: 0.5rem;">
-            <a href="https://cyber.dabamos.de/88x31/"><img src="/static/mbs/88x31.gif" /></a>
-            <a href="https://hetzner.com"><img src="/static/mbs/hetzner.gif" /></a>
-            <a><img src="/static/mbs/35mm.gif" /></a>
-            <a href="https://archlinux.org"><img src="/static/mbs/gnu-linux.gif" /></a>
-            <a><img src="/static/mbs/html.gif" /></a>
-            <a href="https://winworldpc.com/product/netscape-navigator/30x"><img src="/static/mbs/netscape.webp" /></a>
-            <a><img src="/static/mbs/notepad.gif" /></a>
+            <a href="https://cyber.dabamos.de/88x31/"><img src="./static/mbs/88x31.gif" /></a>
+            <a href="https://hetzner.com"><img src="./static/mbs/hetzner.gif" /></a>
+            <a><img src="./static/mbs/35mm.gif" /></a>
+            <a href="https://archlinux.org"><img src="./static/mbs/gnu-linux.gif" /></a>
+            <a><img src="./static/mbs/html.gif" /></a>
+            <a href="https://winworldpc.com/product/netscape-navigator/30x"><img src="./static/mbs/netscape.webp" /></a>
+            <a><img src="./static/mbs/notepad.gif" /></a>
           </div>
           <div class="flex flex-row" style="margin-left: 4px; margin-bottom: 0.5rem;">
-            <a><img src="/static/mbs/arizona.gif" /></a>
-            <a><img src="/static/mbs/css.gif" /></a>
-            <a><img src="/static/mbs/fckgoogle.gif" /></a>
-            <a href="https://www.mozilla.org/en-US/firefox/new/"><img src="/static/mbs/firefox.gif" /></a>
-            <a><img src="/static/mbs/bitwarden.gif" /></a>
+            <a><img src="./static/mbs/arizona.gif" /></a>
+            <a><img src="./static/mbs/css.gif" /></a>
+            <a><img src="./static/mbs/fckgoogle.gif" /></a>
+            <a href="https://www.mozilla.org/en-US/firefox/new/"><img src="./static/mbs/firefox.gif" /></a>
+            <a><img src="./static/mbs/bitwarden.gif" /></a>
             <a href="https://steamcommunity.com/id/syriciumcs2/"><img src="/static/mbs/csplayer.gif" /></a>
-            <a><img src="/static/mbs/chrmevil.gif" /></a>
+            <a><img src="./static/mbs/chrmevil.gif" /></a>
           </div>
         </div>
       </div>
     </div>
-  
-    <!--
-    <div class="text-center">
-      <div class="bg-[#0a1011] space-y-4 inline-flex  flex-col m-8 py-4 px-4">
-        <p class="text-5xl underline font-['Agbalumo']">hello!</p>
-        <div class="font-['Playfair_Display'] text-xl">
-          <p>my name is theo, i do software development (mostly backend)</p>
-          <p>my hobbies are playing games and listening to music</p>
-          <div class="flex flex-row items-center justify-center space-x-2 my-2">
-            <p>these are my socials:</p>
-            <a href="https://codeberg.org/syricium" target="_blank"><img class="h-6"src="https://codeberg.org/assets/img/favicon.png"/></a>
-            <a href="https://discord.com/users/424548154403323934" target="_blank"><img class="h-4"src="/static/discord.png"/></a>
-            <a href="https://steamcommunity.com/id/syricium/" target="_blank"><img class="h-4"src="https://steamcommunity.com/favicon.ico"/></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  
-    <div class="text-center">
-      <div class="bg-[#0a1011] space-y-4 inline-flex  flex-col m-8 py-4 px-4">
-        <p class="text-5xl underline font-['Agbalumo']">my projects</p>
-        <div class="font-['Playfair_Display'] text-xl">
-          <p>these are my projects, most of them were discord bots.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-    -->
 </body>
 </html>
