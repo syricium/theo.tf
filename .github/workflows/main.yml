@@ -38,6 +38,7 @@ jobs:
       - name: Copy src to gh-pages
         run: |
           git checkout main
+          mkdir -p ../temp/
           cp -r src/* ../temp/
           git checkout gh-pages
           cp -r ../temp/* .
